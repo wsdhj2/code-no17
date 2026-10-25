@@ -1,0 +1,117 @@
+[
+  {
+    "name": "rifle-1",
+    "duration": 0.34,
+    "peak": 0.83
+  },
+  {
+    "name": "rifle-2",
+    "duration": 0.34,
+    "peak": 0.83
+  },
+  {
+    "name": "rifle-3",
+    "duration": 0.34,
+    "peak": 0.83
+  },
+  {
+    "name": "heavy",
+    "duration": 0.34,
+    "peak": 0.85
+  },
+  {
+    "name": "impact",
+    "duration": 0.24997732426303854,
+    "peak": 0.6
+  },
+  {
+    "name": "armor",
+    "duration": 0.24997732426303854,
+    "peak": 0.6
+  },
+  {
+    "name": "shield",
+    "duration": 0.24997732426303854,
+    "peak": 0.6
+  },
+  {
+    "name": "debris",
+    "duration": 0.24997732426303854,
+    "peak": 0.6
+  },
+  {
+    "name": "explosion",
+    "duration": 1.5,
+    "peak": 0.94
+  },
+  {
+    "name": "infected-walker",
+    "duration": 0.8,
+    "peak": 0.75
+  },
+  {
+    "name": "infected-runner",
+    "duration": 0.62,
+    "peak": 0.75
+  },
+  {
+    "name": "infected-armored",
+    "duration": 0.8499773242630385,
+    "peak": 0.75
+  },
+  {
+    "name": "infected-bloater",
+    "duration": 1.1,
+    "peak": 0.75
+  },
+  {
+    "name": "infected-giant",
+    "duration": 1.7,
+    "peak": 0.75
+  },
+  {
+    "name": "squad-hurt",
+    "duration": 0.34997732426303857,
+    "peak": 0.65
+  },
+  {
+    "name": "rescue",
+    "duration": 0.8699773242630385,
+    "peak": 0.6
+  },
+  {
+    "name": "upgrade",
+    "duration": 0.8699773242630385,
+    "peak": 0.6
+  },
+  {
+    "name": "radio",
+    "duration": 0.7299773242630385,
+    "peak": 0.6
+  },
+  {
+    "name": "victory",
+    "duration": 1.0099773242630385,
+    "peak": 0.6
+  },
+  {
+    "name": "defeat",
+    "duration": 0.8699773242630385,
+    "peak": 0.6
+  },
+  {
+    "name": "music-patrol",
+    "duration": 43.636371882086166,
+    "peak": 0.7
+  },
+  {
+    "name": "music-boss",
+    "duration": 33.10344671201814,
+    "peak": 0.7
+  },
+  {
+    "name": "ambience",
+    "duration": 18.0,
+    "peak": 0.45
+  }
+]

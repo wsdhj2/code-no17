@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="icon_background">#263440</color>
+    <style name="GameTheme" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowBackground">#10191F</item>
+        <item name="android:colorAccent">#D6BA7C</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+</resources>

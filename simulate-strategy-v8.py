@@ -1,0 +1,2 @@
+from pathlib import Path
+p=Path('simulate-campaign.cjs');s=p.read_text(encoding='utf-8-sig');s=s.replace("let x=r.bossSpawned?216:106;for(const e of danger)", "let x=r.bossSpawned?216:106;const incoming=r.entities.filter(o=>F.TYPES[o.type]&&o.type!=='giant'&&o.y>440).sort((a,b)=>b.y-a.y)[0];if(incoming&&r.weapon==='laserCannon')x=incoming.x;for(const e of danger)");p.write_text(s,encoding='utf-8')

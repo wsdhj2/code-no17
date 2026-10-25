@@ -1,0 +1,3 @@
+from pathlib import Path
+p=Path('import-production-audio.py');s=p.read_text(encoding='utf-8');s+='''\nfor name,file,d in [('gun-laser','lumosaw.wav',.17),('shield-hit','emag.wav',.18),('shield','emag.wav',.26),('vehicle-engine','ventilator.wav',1.6)]:save(name,read(res/file)[:int(sr*d)])\n''';p.write_text(s,encoding='utf-8')
+p=Path('frontline.js');s=p.read_text(encoding='utf-8').replace('<p class="keyboard-help">电脑：', '<details class="sound-credits"><summary>音效鸣谢</summary><p>枪械录音：The Free Firearm Sound Library（Ben Jaszczak、Brian Nelson、Kevin Heras、Matthew Nanney），CC0。效果素材：Residue-sfx / FacadeGaikan，CC0。Jet Engine Takeoff / dklon，CC BY 3.0。素材已裁剪、混音。</p></details><p class="keyboard-help">电脑：');p.write_text(s,encoding='utf-8')

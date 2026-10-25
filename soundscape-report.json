@@ -1,0 +1,11 @@
+{
+  "bossMusicStarts": true,
+  "bossRoar": true,
+  "pauseFreezesAudio": true,
+  "resumeKeepsPosition": true,
+  "independentVolume": true,
+  "muteWorks": true,
+  "allAudioDecodes": true,
+  "mobileLayout": true,
+  "errors": []
+}

@@ -1,0 +1,1 @@
+const F=require('./engine');for(const y of [530,370,150]){const r=new F.Run({unlocked:2,weapon:'shotgun'});r.entities=[];r.nextWave=Infinity;r.army=1;r.shotClock=Infinity;const z=r.unit('walker',r.x+3,y,{speed:0,hp:1000,max:1000});r.shoot();for(let i=0;i<80;i++)r.step(.01);console.log(y,1000-z.hp)}

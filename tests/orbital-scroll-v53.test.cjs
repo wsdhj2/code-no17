@@ -1,0 +1,2 @@
+const test=require('node:test'),a=require('node:assert/strict'),V=require('../orbital-v44');
+test('post-impact cloud follows road scrolling without changing the damage location',()=>{const ctx=new Proxy({},{get:(o,k)=>o[k]||(()=>{}),set:(o,k,v)=>(o[k]=v,true)});const e={x:216,y:300,arrival:3,age:2,detonated:false};let point;const project=(x,y)=>(point={x,y});V.draw(ctx,e,project,180,30);a.equal(point.y,300);e.detonated=true;e.age=5;V.draw(ctx,e,project,180,30);a.equal(point.y,360);a.equal(e.y,300);e.age=7;V.draw(ctx,e,project,180,30);a.equal(point.y,420);});

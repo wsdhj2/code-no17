@@ -1,0 +1,20 @@
+[
+  {
+    "file": "orbital-designate-v44.wav",
+    "seconds": 0.48,
+    "peak": 0.66,
+    "rms": 0.0792
+  },
+  {
+    "file": "orbital-incoming-v44.wav",
+    "seconds": 0.75,
+    "peak": 0.5387,
+    "rms": 0.1037
+  },
+  {
+    "file": "orbital-impact-v44.wav",
+    "seconds": 6.4,
+    "peak": 0.93,
+    "rms": 0.1412
+  }
+]

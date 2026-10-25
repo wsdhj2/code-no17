@@ -1,0 +1,11 @@
+from pathlib import Path
+p=Path('engine.js');s=p.read_text(encoding='utf-8');s=s.replace("e.x+=(this.x-e.x)*Math.min(1,dt*9);e.y=562;", "const escorts=this.effects.filter(v=>(v.type==='mgTank'||v.type==='grenadeTank')&&v.hp>0),offset=escorts.length>1?(escorts.indexOf(e)===0?-26:26):0;e.x+=(this.x+offset-e.x)*Math.min(1,dt*9);e.y=562;")
+p.write_text(s,encoding='utf-8')
+p=Path('frontline.js');s=p.read_text(encoding='utf-8');s=s.replace("function levelClear(){clearAim();", "function levelClear(){$('#bossIntro')?.remove();clearAim();")
+s=s.replace("run.nextLevel();corpses=[];particles=[];", "run.nextLevel();corpses=[];particles=[];floaters=[];ripples=[];$('#toast').style.opacity=0;")
+s=s.replace("screen='run';$('#bossIntro')?.remove();particles=[];", "screen='run';$('#bossIntro')?.remove();$('#toast').style.opacity=0;particles=[];")
+s=s.replace("toast('核心暴露 · 火力全开',2)","toast('核心暴露 · 火力全开',2)")
+s=s.replace("<small>松手确认 · Esc 取消</small>","<small>松手确认 · 拖回取消</small>")
+s=s.replace("let bossIntroUntil=0;",'')
+s=s.replace('bossIntroUntil=visualTime+3;','')
+p.write_text(s,encoding='utf-8')

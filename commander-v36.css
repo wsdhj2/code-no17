@@ -1,0 +1,12 @@
+/* Independent illustrated commander; liaison keeps the original atlas. */
+.comms-portrait.commander{
+ background-image:url('assets/commander-yiqi-v36.png');
+ background-size:contain;
+ background-position:center bottom;
+ background-repeat:no-repeat;
+ width:92%;max-width:370px;
+ height:calc(100% - 220px);max-height:550px;
+ aspect-ratio:auto;left:auto;right:-8px;bottom:196px;
+ filter:drop-shadow(0 7px 14px #0005);
+}
+@media(max-height:740px){.comms-portrait.commander{width:92%;right:-5px;bottom:193px;height:calc(100% - 218px)}}

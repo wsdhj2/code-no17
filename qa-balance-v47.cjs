@@ -1,0 +1,12 @@
+const {chromium}=require('C:/Users/31681/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');const a=require('node:assert/strict');
+(async()=>{const b=await chromium.launch({channel:'msedge',headless:true});try{for(const [width,height]of[[390,844],[1440,960]]){
+const p=await b.newPage({viewport:{width,height}}),errors=[];p.on('pageerror',e=>errors.push(e.message));
+await p.addInitScript(()=>localStorage.setItem('ember-front-record',JSON.stringify({campaignVersion:24,storySkipVersion:25,prologueCompleted:true,skipStory:true,difficulty:'easy'})));
+await p.route('**/frontline.js*',async r=>{const v=await r.fetch();await r.fulfill({response:v,body:(await v.text()).replace('window.emberSnapshot=','window.barrageQA={getRun:()=>run,events};window.emberSnapshot=')});});
+await p.goto('http://localhost:4186');await p.click('#start');await p.click('#missionDeploy');await p.click('#deployStart');
+await p.evaluate(()=>{const r=barrageQA.getRun();r.entities=[];r.effects=[];r.enemyBullets=[];r.nextWave=Infinity;r.shotClock=Infinity;r.level=7;r.stageId=14;r.eliteSpawned=true;r.army=36;r.syncMembers();r.x=r.targetX=216;r.effects.push({type:'energyShield',hp:1e6,max:1e6,age:1,arrival:0,duration:1000,x:216,y:624});r.time=30;r.wave=3;r.spawnRobots(0,140,30);r.spawnRobots(1,140,30);for(const x of [106,326])r.unit('sentry',x,280,{fireClock:0,holdY:280});r.unit('cannon',326,330,{fireClock:0,holdY:330});for(const x of [82,140,294])r.unit('gunner',x,200,{speed:0,fireClock:0});for(let i=0;i<320;i++)r.step(.01);r.unit('sapper',151,570,{fuse:.6});r.unit('sapper',281,560,{fuse:.6});r.step(.01);barrageQA.events();});
+await p.waitForTimeout(80);const s=await p.evaluate(()=>({bullets:barrageQA.getRun().enemyBullets.length,units:barrageQA.getRun().entities.length,cars:barrageQA.getRun().entities.filter(o=>o.type==='sapper').length}));a.ok(s.bullets>=8,s.bullets);a.ok(s.units>=30,s.units);a.ok(s.cars>=2);a.ok(s.bullets<=360);await p.screenshot({path:`preview-balance-v47-${width}.png`});
+await p.evaluate(()=>{const r=barrageQA.getRun();for(const o of r.entities)if(Frontline.TYPES[o.type]?.indestructible)r.hurt(o,1e9,'orbitalBomb');});a.ok(await p.evaluate(()=>barrageQA.getRun().entities.some(o=>o.type==='sentry'&&!o.dead)));
+a.deepEqual(errors,[]);console.log(width,s);await p.close();}
+console.log('PASS mechanical wave with reduced straight shots, armed sapper sprites, invulnerable bunkers and bounded projectiles on phone/desktop');
+}finally{await b.close()}})().catch(e=>{console.error(e);process.exit(1)});

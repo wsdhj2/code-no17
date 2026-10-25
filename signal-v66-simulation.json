@@ -1,0 +1,149 @@
+{
+  "note": "Scripted movement/airstrike bot, not player win rates.",
+  "rows": [
+    {
+      "branch": "engineers",
+      "difficulty": "easy",
+      "seed": 22,
+      "state": "lost",
+      "time": 95,
+      "army": 0,
+      "kills": 242,
+      "engineer": true,
+      "repair": false,
+      "boss": false
+    },
+    {
+      "branch": "engineers",
+      "difficulty": "easy",
+      "seed": 77,
+      "state": "cleared",
+      "time": 100,
+      "army": 22,
+      "kills": 278,
+      "engineer": true,
+      "repair": false,
+      "boss": false
+    },
+    {
+      "branch": "engineers",
+      "difficulty": "easy",
+      "seed": 771,
+      "state": "lost",
+      "time": 90,
+      "army": 0,
+      "kills": 239,
+      "engineer": true,
+      "repair": false,
+      "boss": false
+    },
+    {
+      "branch": "engineers",
+      "difficulty": "normal",
+      "seed": 22,
+      "state": "lost",
+      "time": 60,
+      "army": 0,
+      "kills": 143,
+      "engineer": true,
+      "repair": false,
+      "boss": false
+    },
+    {
+      "branch": "engineers",
+      "difficulty": "normal",
+      "seed": 77,
+      "state": "cleared",
+      "time": 100,
+      "army": 21,
+      "kills": 362,
+      "engineer": true,
+      "repair": false,
+      "boss": false
+    },
+    {
+      "branch": "engineers",
+      "difficulty": "normal",
+      "seed": 771,
+      "state": "cleared",
+      "time": 100,
+      "army": 14,
+      "kills": 359,
+      "engineer": true,
+      "repair": false,
+      "boss": false
+    },
+    {
+      "branch": "tower",
+      "difficulty": "easy",
+      "seed": 22,
+      "state": "cleared",
+      "time": 127,
+      "army": 30,
+      "kills": 388,
+      "engineer": false,
+      "repair": true,
+      "boss": true
+    },
+    {
+      "branch": "tower",
+      "difficulty": "easy",
+      "seed": 77,
+      "state": "cleared",
+      "time": 127,
+      "army": 35,
+      "kills": 631,
+      "engineer": false,
+      "repair": true,
+      "boss": true
+    },
+    {
+      "branch": "tower",
+      "difficulty": "easy",
+      "seed": 771,
+      "state": "cleared",
+      "time": 127,
+      "army": 30,
+      "kills": 388,
+      "engineer": false,
+      "repair": true,
+      "boss": true
+    },
+    {
+      "branch": "tower",
+      "difficulty": "normal",
+      "seed": 22,
+      "state": "cleared",
+      "time": 127,
+      "army": 23,
+      "kills": 600,
+      "engineer": false,
+      "repair": true,
+      "boss": true
+    },
+    {
+      "branch": "tower",
+      "difficulty": "normal",
+      "seed": 77,
+      "state": "lost",
+      "time": 98,
+      "army": 0,
+      "kills": 706,
+      "engineer": false,
+      "repair": false,
+      "boss": false
+    },
+    {
+      "branch": "tower",
+      "difficulty": "normal",
+      "seed": 771,
+      "state": "lost",
+      "time": 101,
+      "army": 0,
+      "kills": 754,
+      "engineer": false,
+      "repair": false,
+      "boss": false
+    }
+  ]
+}

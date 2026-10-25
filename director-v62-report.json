@@ -1,0 +1,156 @@
+{
+  "note": "Deterministic wave and growth simulation; not human comfort ratings or player win rates.",
+  "curves": [
+    {
+      "weight": 0.3,
+      "bonusAt16": 0.12426406871192854,
+      "bonusAt24": 0.21961524227066315,
+      "bonusAt36": 0.3363961030678927
+    },
+    {
+      "weight": 0.45,
+      "bonusAt16": 0.1863961030678928,
+      "bonusAt24": 0.32942286340599475,
+      "bonusAt36": 0.5045941546018391
+    },
+    {
+      "weight": 0.7,
+      "bonusAt16": 0.28994949366116657,
+      "bonusAt24": 0.512435565298214,
+      "bonusAt36": 0.7849242404917496
+    }
+  ],
+  "selectedWeight": 0.45,
+  "comparisons": 1350,
+  "allAtLeastV61": true,
+  "meanAdded": 8.922222222222222,
+  "maxAdded": 45,
+  "elapsedMs": 112,
+  "growthAndLossTrace": [
+    {
+      "second": 1,
+      "army": 32,
+      "multiplier": 1.0529
+    },
+    {
+      "second": 2,
+      "army": 32,
+      "multiplier": 1.0995
+    },
+    {
+      "second": 3,
+      "army": 32,
+      "multiplier": 1.1407
+    },
+    {
+      "second": 4,
+      "army": 32,
+      "multiplier": 1.1771
+    },
+    {
+      "second": 5,
+      "army": 32,
+      "multiplier": 1.2091
+    },
+    {
+      "second": 6,
+      "army": 32,
+      "multiplier": 1.2374
+    },
+    {
+      "second": 7,
+      "army": 32,
+      "multiplier": 1.2624
+    },
+    {
+      "second": 8,
+      "army": 32,
+      "multiplier": 1.2845
+    },
+    {
+      "second": 9,
+      "army": 32,
+      "multiplier": 1.3039
+    },
+    {
+      "second": 10,
+      "army": 32,
+      "multiplier": 1.3211
+    },
+    {
+      "second": 11,
+      "army": 32,
+      "multiplier": 1.3362
+    },
+    {
+      "second": 12,
+      "army": 32,
+      "multiplier": 1.3496
+    },
+    {
+      "second": 13,
+      "army": 6,
+      "multiplier": 1.2505
+    },
+    {
+      "second": 14,
+      "army": 6,
+      "multiplier": 1.1795
+    },
+    {
+      "second": 15,
+      "army": 6,
+      "multiplier": 1.1286
+    },
+    {
+      "second": 16,
+      "army": 6,
+      "multiplier": 1.0922
+    },
+    {
+      "second": 17,
+      "army": 6,
+      "multiplier": 1.066
+    },
+    {
+      "second": 18,
+      "army": 6,
+      "multiplier": 1.0473
+    },
+    {
+      "second": 19,
+      "army": 6,
+      "multiplier": 1.0339
+    },
+    {
+      "second": 20,
+      "army": 6,
+      "multiplier": 1.0243
+    },
+    {
+      "second": 21,
+      "army": 6,
+      "multiplier": 1.0174
+    },
+    {
+      "second": 22,
+      "army": 6,
+      "multiplier": 1.0125
+    },
+    {
+      "second": 23,
+      "army": 6,
+      "multiplier": 1.0089
+    },
+    {
+      "second": 24,
+      "army": 6,
+      "multiplier": 1.0064
+    },
+    {
+      "second": 25,
+      "army": 6,
+      "multiplier": 1.0046
+    }
+  ]
+}

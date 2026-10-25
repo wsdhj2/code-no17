@@ -1,0 +1,218 @@
+{
+  "note": "Instant-command strategy simulation; not player win rates.",
+  "results": [
+    {
+      "seed": 98,
+      "stages": [
+        {
+          "code": "1-1",
+          "army": 28,
+          "kills": 239,
+          "time": 47
+        },
+        {
+          "code": "1-2",
+          "army": 36,
+          "kills": 304,
+          "time": 73
+        },
+        {
+          "code": "2-1",
+          "army": 28,
+          "kills": 566,
+          "time": 118
+        },
+        {
+          "code": "2-2",
+          "army": 36,
+          "kills": 853,
+          "time": 162
+        },
+        {
+          "code": "2-3",
+          "army": 36,
+          "kills": 945,
+          "time": 187
+        },
+        {
+          "code": "3-1",
+          "army": 32,
+          "kills": 1274,
+          "time": 232
+        },
+        {
+          "code": "3-2",
+          "army": 36,
+          "kills": 1372,
+          "time": 258
+        },
+        {
+          "code": "4-1",
+          "army": 32,
+          "kills": 1724,
+          "time": 305
+        },
+        {
+          "code": "4-2",
+          "army": 36,
+          "kills": 2109,
+          "time": 358
+        },
+        {
+          "code": "4-3",
+          "army": 36,
+          "kills": 2215,
+          "time": 387
+        },
+        {
+          "code": "5-1",
+          "army": 36,
+          "kills": 2630,
+          "time": 431
+        },
+        {
+          "code": "5-2",
+          "army": 36,
+          "kills": 3080,
+          "time": 483
+        },
+        {
+          "code": "5-3",
+          "army": 0,
+          "time": 516,
+          "state": "lost"
+        }
+      ],
+      "state": "lost",
+      "kills": 3216
+    },
+    {
+      "seed": 22,
+      "stages": [
+        {
+          "code": "1-1",
+          "army": 24,
+          "kills": 236,
+          "time": 47
+        },
+        {
+          "code": "1-2",
+          "army": 32,
+          "kills": 301,
+          "time": 73
+        },
+        {
+          "code": "2-1",
+          "army": 28,
+          "kills": 563,
+          "time": 114
+        },
+        {
+          "code": "2-2",
+          "army": 36,
+          "kills": 850,
+          "time": 158
+        },
+        {
+          "code": "2-3",
+          "army": 36,
+          "kills": 937,
+          "time": 183
+        },
+        {
+          "code": "3-1",
+          "army": 29,
+          "kills": 1266,
+          "time": 229
+        },
+        {
+          "code": "3-2",
+          "army": 36,
+          "kills": 1363,
+          "time": 255
+        },
+        {
+          "code": "4-1",
+          "army": 28,
+          "kills": 1715,
+          "time": 302
+        },
+        {
+          "code": "4-2",
+          "army": 36,
+          "kills": 2100,
+          "time": 351
+        },
+        {
+          "code": "4-3",
+          "army": 36,
+          "kills": 2208,
+          "time": 380
+        },
+        {
+          "code": "5-1",
+          "army": 36,
+          "kills": 2623,
+          "time": 424
+        },
+        {
+          "code": "5-2",
+          "army": 36,
+          "kills": 3073,
+          "time": 470
+        },
+        {
+          "code": "5-3",
+          "army": 25,
+          "time": 505,
+          "state": "won"
+        }
+      ],
+      "state": "won",
+      "kills": 3244
+    },
+    {
+      "seed": 771,
+      "stages": [
+        {
+          "code": "1-1",
+          "army": 8,
+          "kills": 239,
+          "time": 50
+        },
+        {
+          "code": "1-2",
+          "army": 9,
+          "kills": 308,
+          "time": 79
+        },
+        {
+          "code": "2-1",
+          "army": 28,
+          "kills": 570,
+          "time": 121
+        },
+        {
+          "code": "2-2",
+          "army": 36,
+          "kills": 857,
+          "time": 165
+        },
+        {
+          "code": "2-3",
+          "army": 36,
+          "kills": 934,
+          "time": 190
+        },
+        {
+          "code": "3-1",
+          "army": 0,
+          "time": 232,
+          "state": "lost"
+        }
+      ],
+      "state": "lost",
+      "kills": 1241
+    }
+  ]
+}

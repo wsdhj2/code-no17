@@ -1,0 +1,23 @@
+{
+  "pointerCancel": true,
+  "globalSlowTime": true,
+  "bombDeploy": true,
+  "pauseResume": true,
+  "rescueJoin": true,
+  "progression": {
+    "state": "won",
+    "time": 142.06949999999918,
+    "rescued": 28,
+    "casualties": 0,
+    "army": 36,
+    "checkpoints": [
+      {
+        "time": 132.00350000000833,
+        "kind": "boss"
+      }
+    ]
+  },
+  "mobileTouch": true,
+  "noHorizontalOverflow": true,
+  "pageErrors": []
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "name": "score-menu-v43",
+    "bpm": 68,
+    "meter": 3,
+    "bars": 24,
+    "seconds": 63.529,
+    "loop": true,
+    "rms": 0.1178,
+    "peak": 0.5603
+  },
+  {
+    "name": "score-battle-v43",
+    "bpm": 128,
+    "meter": 4,
+    "bars": 32,
+    "seconds": 60.0,
+    "loop": true,
+    "rms": 0.1698,
+    "peak": 0.7088
+  },
+  {
+    "name": "score-boss-v43",
+    "bpm": 142,
+    "meter": 5,
+    "bars": 24,
+    "seconds": 50.704,
+    "loop": true,
+    "rms": 0.1923,
+    "peak": 0.6704
+  },
+  {
+    "name": "score-victory-v43",
+    "bpm": 112,
+    "meter": 4,
+    "bars": 12,
+    "seconds": 28.914,
+    "loop": false,
+    "rms": 0.1638,
+    "peak": 0.753
+  },
+  {
+    "name": "score-defeat-v43",
+    "bpm": 52,
+    "meter": 3,
+    "bars": 8,
+    "seconds": 30.892,
+    "loop": false,
+    "rms": 0.098,
+    "peak": 0.5018
+  }
+]

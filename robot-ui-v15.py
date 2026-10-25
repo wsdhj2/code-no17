@@ -1,0 +1,27 @@
+from pathlib import Path
+p=Path('frontline.js');s=p.read_text(encoding='utf-8')
+a=s.index('const ROUTE_POINTS=');z=s.index('function routeUnlocked()',a)
+s=s[:a]+'''const ROUTE_POINTS=[];let routeY=145;for(let chapter=0;chapter<F.LEVELS.length;chapter++){for(const m of F.STAGES.filter(m=>m.chapter===chapter)){ROUTE_POINTS.push([[350,510,410][m.part%3],routeY]);routeY+=105;}routeY+=55;}const SAFE_Y=routeY+30,ROUTE_HEIGHT=SAFE_Y+125;
+if(record.campaignVersion!==15){if(record.safeReached&&Number(record.routeUnlocked)<=12){record.safeReached=false;record.routeUnlocked=13;record.unlocked=Math.max(5,Number(record.unlocked)||0);}record.campaignVersion=15;try{localStorage.setItem('ember-front-record',JSON.stringify(record));}catch{}}
+'''+s[z:]
+s=s.replace('Math.min(4,Number(record.unlocked)||0)', 'Math.min(F.LEVELS.length-1,Number(record.unlocked)||0)').replace('Math.min(4,run.level+1)', 'Math.min(F.LEVELS.length-1,run.level+1)')
+s=s.replace('01 / 05','01 / 10').replace('${(record.clearedStages||[]).length} / 13','${(record.clearedStages||[]).length} / ${F.STAGES.length}').replace('五个章节已完成','十个章节已完成')
+s=s.replace('viewBox="0 0 720 1580"','viewBox="0 0 720 ${ROUTE_HEIGHT}"').replace('[520,1460]','[520,SAFE_Y]').replace('/1580*100','/ROUTE_HEIGHT*100').replace('${1460/ROUTE_HEIGHT*100}', '${SAFE_Y/ROUTE_HEIGHT*100}')
+s=s.replace('<div class="route-map-content">','<div class="route-map-content" style="aspect-ratio:720/${ROUTE_HEIGHT}">')
+s=s.replace('<strong>0${i+1}</strong>', '<strong>${String(i+1).padStart(2,\'0\')}</strong>')
+s=s.replace("document.querySelector('[data-stage=\"12\"]')", "document.querySelector(`[data-stage=\"${F.STAGES.length-1}\"]`)")
+s=s.replace("初始", "初始")
+s=s.replace("const mapAtlas=new Image()", "const mechBossAtlas=new Image(),robotAtlas=new Image();mechBossAtlas.src='assets/mech-bosses-v15.png';robotAtlas.src='assets/robot-enemies-v15.png';\nconst mapAtlas=new Image()")
+s=s.replace("const image=group==='boss'?bossAtlas:escortAtlas,data=window.EmberCampaignManifest?.[group]?.[row]?.[col];", "const mechanical=group==='robot'||group==='boss'&&row>=5;const image=group==='robot'?robotAtlas:mechanical?mechBossAtlas:group==='boss'?bossAtlas:escortAtlas,data=mechanical?window.EmberRobotManifest?.[group==='robot'?'robot':'boss']?.[group==='robot'?row:row-5]?.[Math.min(1,col)]:window.EmberCampaignManifest?.[group]?.[row]?.[col];")
+s=s.replace("const t=run?run.time:0,texture=run&&mapTextures[run.level]?mapTextures[run.level]:roadTexture", "const t=run?run.time:0,texture=run&&mapTextures[run.level%5]?mapTextures[run.level%5]:roadTexture")
+s=s.replace("if(run&&!mapTextures[run.level])mapScenery(t);", "if(run&&run.level>=5){ctx.fillStyle=['#41576b30','#313f5b40','#203b6550','#1b484d38','#4e263d3b'][run.level-5];ctx.fillRect(0,0,W,H);for(let y=(t*F.ROAD_SPEED)%170-170;y<H;y+=170){for(const x of [17,395]){rect(x,y,20,80,'#16252bd9');rect(x+5,y+10,10,3,run.level===7?'#73d8e2':'#ce7d59');rect(x+5,y+18,10,2,'#4c6974');}}}")
+s=s.replace("if(o.type==='rescue')rescue(o);", "if(o.type==='rescue')rescue(o);")
+s=s.replace("else{const p=project(o.x,o.y);if(o.type==='spitter')", "else{const p=project(o.x,o.y);if(F.ROBOT_TYPES.includes(o.type)){drawAtlas(ctx,'robot',F.ROBOT_TYPES.indexOf(o.type),o.firing>0?1:0,p.x,p.y,o.type==='robot'?45:56,o.hit>0);if(o.armor>0)bar(p.x,p.y+8,28,o.armor/F.TYPES[o.type].armor,'#92bec9');}else if(o.type==='spitter')")
+s=s.replace("for(const b of run.bullets){", "for(const b of run.enemyBullets){const q=project(b.x,b.y);ctx.save();ctx.translate(q.x,q.y);ctx.rotate(Math.atan2(b.vx,-b.vy));rect(-1,-6,3,13,'#f18465');rect(0,-3,1,8,'#ffe7bf');ctx.restore();}\nfor(const b of run.bullets){")
+s=s.replace("if(e.type==='bilePool'){", "if(e.type==='enemyBlast'){ctx.save();const q=Math.min(1,e.age/e.delay);ctx.globalAlpha=e.detonated?.5:.15;circle(p.x,p.y,e.radius,'#e4885d');ctx.globalAlpha=1;circle(p.x,p.y,e.radius,'#e9ac7c',false);circle(p.x,p.y,e.radius*q,'#f0b77a',false);label(e.detonated?'冲击':'导弹锁定',p.x,p.y-e.radius-8,'#ebbb8c',10);ctx.restore();return;}if(e.type==='bilePool'){")
+s=s.replace("if(e.type==='tankShot')", "if(e.type==='enemyShot')mixer.play(e.kind==='rocket'?'grenade-launch':'enemy-rifle',.25);if(e.type==='tankShot')")
+s=s.replace("EmberCharacters.draw(ctx,c.type,p.x,p.y,c.scale,3,false,Math.max(0,alpha));", "if(F.ROBOT_TYPES.includes(c.type)){ctx.save();ctx.globalAlpha=Math.max(0,alpha)*.6;ctx.translate(p.x,p.y);ctx.rotate(1.1);drawAtlas(ctx,'robot',F.ROBOT_TYPES.indexOf(c.type),0,0,0,35);ctx.restore();}else EmberCharacters.draw(ctx,c.type,p.x,p.y,c.scale,3,false,Math.max(0,alpha));")
+s=s.replace("const map=F.LEVELS[run.level];el.innerHTML=", "const map=F.LEVELS[run.level];el.innerHTML=")
+s=s.replace("<span>重型感染体接近</span>","<span>${run.level>=5?'重型机甲接近':'重型感染体接近'}</span>")
+s=s.replace("mapsLoaded:mapTextures.length===5", "mapsLoaded:mapTextures.length===5,robotLoaded:robotAtlas.complete&&robotAtlas.naturalWidth>0,mechLoaded:mechBossAtlas.complete&&mechBossAtlas.naturalWidth>0")
+p.write_text(s,encoding='utf-8')

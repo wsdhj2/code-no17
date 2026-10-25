@@ -1,0 +1,22 @@
+const {chromium}=require('C:/Users/31681/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const a=require('node:assert/strict');
+(async()=>{const b=await chromium.launch({channel:'msedge',headless:true});try{
+const p=await b.newPage({viewport:{width:390,height:844},isMobile:true,hasTouch:true});const errors=[];
+p.on('pageerror',e=>errors.push(e.message));
+await p.addInitScript(()=>localStorage.setItem('ember-front-record',JSON.stringify({campaignVersion:24,storySkipVersion:25,prologueCompleted:true,skipStory:true,difficulty:'easy'})));
+await p.route('**/frontline.js*',async r=>{const v=await r.fetch();await r.fulfill({response:v,body:(await v.text()).replace('window.emberSnapshot=','window.scoreQA={getRun:()=>run};window.emberSnapshot=')});});
+await p.goto('http://localhost:4186');await p.click('#settings');
+await p.waitForFunction(()=>!emberAudioSnapshot().tracks.menu.paused&&emberAudioSnapshot().tracks.menu.time>.2);
+await p.click('#settingsBack');await p.click('#start');await p.click('#missionDeploy');await p.click('#deployStart');
+await p.waitForFunction(()=>emberAudioSnapshot().mode==='patrol'&&emberAudioSnapshot().tracks.patrol.time>.2);
+await p.waitForTimeout(1800);let s=await p.evaluate(()=>emberAudioSnapshot());a.equal(s.tracks.menu.paused,true);a.equal(s.tracks.patrol.error,null);
+await p.evaluate(()=>{const r=scoreQA.getRun();r.bossSpawned=true;r.bossKilled=false;});
+await p.waitForFunction(()=>emberAudioSnapshot().mode==='boss'&&emberAudioSnapshot().tracks.boss.time>.2);
+await p.waitForTimeout(900);let before=await p.evaluate(()=>emberAudioSnapshot().tracks.boss.volume);
+await p.evaluate(()=>EmberSound.dialogue=true);await p.waitForTimeout(900);a.ok((await p.evaluate(()=>emberAudioSnapshot().tracks.boss.volume))<before*.5);
+await p.evaluate(()=>{EmberSound.dialogue=false;scoreQA.getRun().state='cleared';});
+await p.waitForFunction(()=>emberAudioSnapshot().mode==='victory'&&emberAudioSnapshot().tracks.victory.time>.2);
+await p.waitForTimeout(22500);a.equal(await p.evaluate(()=>EmberSound.tracks.victory.ended),true);
+for(const mode of ['menu','patrol','boss','victory'])a.equal(await p.evaluate(m=>EmberSound.tracks[m].error?.code??null,mode),null);
+a.deepEqual(errors,[]);console.log('PASS homepage -> battle -> boss -> victory, decoding, fades, dialogue ducking, victory plays once');
+}finally{await b.close();}})().catch(e=>{console.error(e);process.exit(1)});

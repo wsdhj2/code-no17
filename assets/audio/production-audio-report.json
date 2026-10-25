@@ -1,0 +1,114 @@
+[
+  {
+    "file": "gun-pistol.wav",
+    "seconds": 0.48
+  },
+  {
+    "file": "gun-pistol-alt.wav",
+    "seconds": 0.48
+  },
+  {
+    "file": "gun-smg.wav",
+    "seconds": 0.23
+  },
+  {
+    "file": "gun-smg-alt.wav",
+    "seconds": 0.23
+  },
+  {
+    "file": "gun-rifle.wav",
+    "seconds": 0.75
+  },
+  {
+    "file": "gun-rifle-alt.wav",
+    "seconds": 0.75
+  },
+  {
+    "file": "gun-shotgun.wav",
+    "seconds": 0.7
+  },
+  {
+    "file": "gun-shotgun-alt.wav",
+    "seconds": 0.7
+  },
+  {
+    "file": "airstrike-flyby.wav",
+    "seconds": 3.0
+  },
+  {
+    "file": "airstrike-impact.wav",
+    "seconds": 0.838
+  },
+  {
+    "file": "blast-grenade.wav",
+    "seconds": 0.6
+  },
+  {
+    "file": "orbital-cannon-impact.wav",
+    "seconds": 2.6
+  },
+  {
+    "file": "air-strafe-cannon.wav",
+    "seconds": 0.26
+  },
+  {
+    "file": "tank-machinegun.wav",
+    "seconds": 0.27
+  },
+  {
+    "file": "orbital-beam-loop.wav",
+    "seconds": 0.32
+  },
+  {
+    "file": "laser-arrive.wav",
+    "seconds": 0.48
+  },
+  {
+    "file": "emp-pulse.wav",
+    "seconds": 0.48
+  },
+  {
+    "file": "spitter-cast.wav",
+    "seconds": 0.48
+  },
+  {
+    "file": "infected-bloater.wav",
+    "seconds": 0.48
+  },
+  {
+    "file": "metal-break.wav",
+    "seconds": 0.12
+  },
+  {
+    "file": "pickup-gear.wav",
+    "seconds": 0.4
+  },
+  {
+    "file": "lure-pulse.wav",
+    "seconds": 0.7
+  },
+  {
+    "file": "empty-magazine.wav",
+    "seconds": 0.4
+  },
+  {
+    "file": "orbital-charge.wav",
+    "seconds": 0.838
+  },
+  {
+    "file": "ui-select.wav",
+    "seconds": 0.065
+  },
+  {
+    "file": "call-confirm.wav",
+    "seconds": 0.11
+  },
+  {
+    "file": "upgrade.wav",
+    "seconds": 0.4
+  },
+  {
+    "file": "rescue.wav",
+    "seconds": 0.4
+  }
+]

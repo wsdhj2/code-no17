@@ -1,0 +1,11 @@
+{
+  "atlasReady": true,
+  "characters": 6,
+  "posesPerCharacter": 4,
+  "all24PosesRender": true,
+  "hitTint": true,
+  "corpses": true,
+  "mobileGallery": true,
+  "mobileTouch": true,
+  "errors": []
+}

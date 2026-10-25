@@ -1,0 +1,11 @@
+{
+  "name": "ember-front",
+  "version": "0.76.0",
+  "private": true,
+  "description": "代号 No.17：指挥部剧情序章、交互教程、十章撤离与无线电支援",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test tests/*.test.cjs",
+    "simulate": "node simulate-campaign.cjs"
+  }
+}

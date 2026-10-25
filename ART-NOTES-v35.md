@@ -1,0 +1,9 @@
+# 弈崎少校 · 照片参考立绘
+
+使用用户提供的面部照片作为参考，以内置 imagegen 生成角色立绘；只将生成的立绘放入游戏，未把参考照片复制到游戏资源中。军服为虚构设计。
+
+提示词：
+
+Use the attached reference photographs of the same adult man to create an original GAME CHARACTER PORTRAIT of him as Commander Yiqi, a human headquarters major in a pixel-art post-apocalyptic evacuation game. Facial likeness is the highest priority: preserve his recognisable rounded face, soft cheeks, natural slightly hooded eyes and their spacing, broad natural nose, full lips, and tousled short black hair with loose fringe. Do not replace him with a generic sharp-jawed anime hero, do not slim or age his face, no beard or glasses. Translate the real person into a polished semi-realistic hand-painted visual-novel illustration with controlled pixel-art-inspired edge texture, detailed and grounded, matching a restrained slate/olive/amber tactical game. One character only, thigh-up standing portrait, three-quarter body angled slightly left, face looking slightly left toward viewer, head fully visible with generous top padding. Calm attentive expression, lightly tired but approachable, lips relaxed. Dark olive and charcoal officer field jacket with subtle fictional major shoulder rank tabs, utility belt, a discreet communications earpiece and collar microphone, weathered fabric and restrained brass hardware. No helmet, hat, face covering or large armor. One hand holds a slim tactical tablet at waist, the other relaxed. Civilian facial identity retained convincingly; credible officer costume, not cosplay excess. Soft cool key light on face and subtle warm amber rim light, natural skin tones. Entire character fully inside canvas. Transparent background, clean alpha cutout, NO background scenery, NO UI, NO lettering, NO labels, NO real-world flags or brands. Portrait 2:3 format, substantial facial detail suitable for a mobile dialogue illustration.
+
+接入目标：仅替换指挥官的对话立绘，联络员保持原资源。独立透明PNG，保留生成图原始alpha；适配竖屏对话框。

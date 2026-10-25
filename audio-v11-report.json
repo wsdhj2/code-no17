@@ -1,0 +1,85 @@
+{
+  "counts": {
+    "gun-pistol": 1,
+    "gun-smg-alt": 1,
+    "call-confirm": 4,
+    "rescue": 1,
+    "airstrike-flyby": 4,
+    "airstrike-impact": 1,
+    "air-strafe-cannon": 1,
+    "orbital-charge": 2,
+    "orbital-cannon-impact": 1,
+    "laser-arrive": 1,
+    "orbital-beam-loop": 1,
+    "emp-pulse": 2,
+    "drop-land": 3,
+    "lure-pulse": 1
+  },
+  "decoded": [
+    {
+      "name": "gun-pistol",
+      "duration": 0.48
+    },
+    {
+      "name": "gun-pistol-alt",
+      "duration": 0.48
+    },
+    {
+      "name": "gun-smg",
+      "duration": 0.229977
+    },
+    {
+      "name": "gun-smg-alt",
+      "duration": 0.229977
+    },
+    {
+      "name": "gun-rifle",
+      "duration": 0.749977
+    },
+    {
+      "name": "gun-rifle-alt",
+      "duration": 0.749977
+    },
+    {
+      "name": "gun-shotgun",
+      "duration": 0.699955
+    },
+    {
+      "name": "gun-shotgun-alt",
+      "duration": 0.699955
+    },
+    {
+      "name": "airstrike-flyby",
+      "duration": 3
+    },
+    {
+      "name": "airstrike-impact",
+      "duration": 0.837642
+    },
+    {
+      "name": "orbital-cannon-impact",
+      "duration": 2.6
+    },
+    {
+      "name": "orbital-charge",
+      "duration": 0.837642
+    },
+    {
+      "name": "orbital-beam-loop",
+      "duration": 0.32
+    },
+    {
+      "name": "laser-arrive",
+      "duration": 0.48
+    },
+    {
+      "name": "spitter-cast",
+      "duration": 0.48
+    },
+    {
+      "name": "tank-machinegun",
+      "duration": 0.269977
+    }
+  ],
+  "errors": []
+}

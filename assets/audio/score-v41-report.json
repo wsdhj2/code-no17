@@ -1,0 +1,38 @@
+[
+  {
+    "file": "score-menu-v41",
+    "bpm": 84,
+    "bars": 24,
+    "seconds": 68.571,
+    "loop": true,
+    "peak": 0.6971,
+    "rms": 0.1641
+  },
+  {
+    "file": "score-battle-v41",
+    "bpm": 124,
+    "bars": 32,
+    "seconds": 61.935,
+    "loop": true,
+    "peak": 0.7106,
+    "rms": 0.1634
+  },
+  {
+    "file": "score-boss-v41",
+    "bpm": 140,
+    "bars": 24,
+    "seconds": 41.143,
+    "loop": true,
+    "peak": 0.6672,
+    "rms": 0.1639
+  },
+  {
+    "file": "score-victory-v41",
+    "bpm": 104,
+    "bars": 8,
+    "seconds": 20.962,
+    "loop": false,
+    "peak": 0.6506,
+    "rms": 0.1638
+  }
+]

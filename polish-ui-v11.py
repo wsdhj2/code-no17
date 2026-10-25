@@ -1,0 +1,5 @@
+from pathlib import Path
+p=Path('frontline.js');s=p.read_text(encoding='utf-8').replace("<i>${elsewhere?'已携带':F.ITEMS[id].arrival+'s'}</i>","<i>${supportPattern(F.ITEMS[id].pattern)}<em>${elsewhere?'已携带':F.ITEMS[id].arrival+'s 抵达'}</em></i>")
+s=s.replace('mgTank:\'<path d="M4 10h24v18H4zM13 1h6v17h-6zM1 13h4v18H1zM27 13h4v18h-4z"/>\'', 'mgTank:\'<path d="M7 11h18v17H7z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M2 10h4v20H2zM26 10h4v20h-4zM14 1h3v14h-3zM10 14h12v7H10z"/><path d="M1 15h6M1 21h6M25 15h6M25 21h6M10 25h12" fill="none" stroke="currentColor" stroke-width="1"/>\'')
+s=s.replace('grenadeTank:\'<path d="M4 12h24v16H4zM11 2h10v16H11zM1 14h4v17H1zM27 14h4v17h-4z"/>\'', 'grenadeTank:\'<path d="M7 11h18v17H7z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M2 11h4v19H2zM26 11h4v19h-4zM10 12h12v10H10zM11 1h9v13h-9z"/><path d="M12 4h7M1 17h6M1 24h6M25 17h6M25 24h6" fill="none" stroke="#203444" stroke-width="1.5"/>\'')
+p.write_text(s,encoding='utf-8')
