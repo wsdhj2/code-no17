@@ -16,7 +16,7 @@ parser.add_argument('--build-tools', default=os.environ.get('ANDROID_BUILD_TOOLS
 parser.add_argument('--platform-jar', default=os.environ.get('ANDROID_PLATFORM_JAR'))
 parser.add_argument('--java-home', default=os.environ.get('JAVA_HOME'))
 parser.add_argument('--work', type=Path, default=PROJECT.parent.parent / 'work' / 'ember-android-build')
-parser.add_argument('--output', type=Path, default=PROJECT.parent / 'ember-front-0.76.0.apk')
+parser.add_argument('--output', type=Path, default=PROJECT.parent / 'ember-front-0.78.0.apk')
 args = parser.parse_args()
 if not all([args.build_tools, args.platform_jar, args.java_home]):
     parser.error('Set --build-tools, --platform-jar and --java-home, or their documented environment variables.')
@@ -86,7 +86,7 @@ compiled = work / 'compiled-res.zip'
 run([aapt, 'compile', '--dir', native / 'res', '-o', compiled])
 resources = work / 'resources.apk'
 run([aapt, 'link', '-o', resources, '-I', platform, '--manifest', native / 'AndroidManifest.xml',
-     '--min-sdk-version', '26', '--target-sdk-version', '36', '--version-code', '76000', '--version-name', '0.76.0',
+     '--min-sdk-version', '26', '--target-sdk-version', '36', '--version-code', '78000', '--version-name', '0.78.0',
      '-A', work / 'assets', compiled])
 classes = work / 'classes'
 classes.mkdir(exist_ok=True)
@@ -114,7 +114,7 @@ run([java, '-jar', tools / 'lib/apksigner.jar', 'sign', '--ks', keystore, '--ks-
      '--v4-signing-enabled', 'false', '--out', output, aligned])
 run([java, '-jar', tools / 'lib/apksigner.jar', 'verify', '--verbose', '--print-certs', output])
 run([align, '-c', '-P', '16', '4', output])
-metadata = {'name': '代号 No.17', 'version': '0.76.0', 'package': 'com.emberfront.game', 'versionCode': 76000,
+metadata = {'name': '代号 No.17', 'version': '0.78.0', 'package': 'com.emberfront.game', 'versionCode': 78000,
             'minAndroid': '8.0 (API 26)', 'targetApi': 36, 'offline': True,
             'permission': ['android.permission.VIBRATE'], 'architecture': 'universal (Java/WebView, no native libraries)',
             'bytes': output.stat().st_size, 'sha256': hashlib.sha256(output.read_bytes()).hexdigest(),
